@@ -1,0 +1,142 @@
+﻿@model IEnumerable<CLUB.Models.SOCIOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" style="font-size:150%">
+            <a class="navbar-brand" href="http://localhost:51176/SOCIOS/Index">
+
+            </a>
+            <a class="nav-item nav-link active" href="http://localhost:58077/SOCIOS/Inicio" style="margin-left:210%">INICIO<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="http://localhost:58077/SOCIOS/Create">MANTENIMIENTO</a>
+            <a class="nav-item nav-link" href="http://localhost:58077/SOCIOS/Index">LISTADO</a>
+            <a class="nav-item nav-link" href="http://localhost:58077/SOCIOS/Login">CERRAR</a>
+        </div>
+    </div>
+</nav>
+
+    <img src="~/Content/Club/socio.png" style="margin-top:2%"  class="d-block w-100"/>
+
+<center>
+    <h1 style="color:dimgray; margin-top:2%">Listado de Socios</h1>
+</center>
+
+<table class="table" style="font-size:125%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEXO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHADENAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFILIADOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATOSMEMBRESIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUGARDETRABAJO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCIONOFICINA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELOFOCINA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADODEMEMBRESIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHASALIDA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDOS)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.FOTO)*@
+            <img width="100" src="@Url.Action("getImage","SOCIOS",new { id= item.CEDULA})" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEXO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHADENAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFILIADOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATOSMEMBRESIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUGARDETRABAJO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCIONOFICINA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELOFOCINA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADODEMEMBRESIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHASALIDA)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.CEDULA }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.CEDULA }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.CEDULA })
+        </td>
+    </tr>
+}
+
+</table>

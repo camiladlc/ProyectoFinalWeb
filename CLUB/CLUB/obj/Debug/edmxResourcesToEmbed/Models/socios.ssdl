@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CLUBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SOCIOS">
+    <Key>
+      <PropertyRef Name="CEDULA" />
+    </Key>
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CEDULA" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FOTO" Type="varbinary(max)" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="20" />
+    <Property Name="SEXO" Type="varchar" MaxLength="15" />
+    <Property Name="EDAD" Type="int" />
+    <Property Name="FECHADENAC" Type="date" />
+    <Property Name="AFILIADOS" Type="varchar" MaxLength="100" />
+    <Property Name="DATOSMEMBRESIA" Type="varchar" MaxLength="25" />
+    <Property Name="LUGARDETRABAJO" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECCIONOFICINA" Type="varchar" MaxLength="60" />
+    <Property Name="TELOFOCINA" Type="varchar" MaxLength="20" />
+    <Property Name="ESTADODEMEMBRESIA" Type="varchar" MaxLength="15" />
+    <Property Name="FECHAINGRESO" Type="date" />
+    <Property Name="FECHASALIDA" Type="date" />
+  </EntityType>
+  <EntityContainer Name="CLUBModelStoreContainer">
+    <EntitySet Name="SOCIOS" EntityType="Self.SOCIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

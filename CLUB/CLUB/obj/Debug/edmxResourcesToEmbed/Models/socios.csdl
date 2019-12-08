@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CLUBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SOCIOS">
+    <Key>
+      <PropertyRef Name="CEDULA" />
+    </Key>
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CEDULA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SEXO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EDAD" Type="Int32" />
+    <Property Name="FECHADENAC" Type="DateTime" Precision="0" />
+    <Property Name="AFILIADOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DATOSMEMBRESIA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LUGARDETRABAJO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCIONOFICINA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TELOFOCINA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADODEMEMBRESIA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FECHAINGRESO" Type="DateTime" Precision="0" />
+    <Property Name="FECHASALIDA" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="CLUBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SOCIOS" EntityType="Self.SOCIOS" />
+  </EntityContainer>
+</Schema>

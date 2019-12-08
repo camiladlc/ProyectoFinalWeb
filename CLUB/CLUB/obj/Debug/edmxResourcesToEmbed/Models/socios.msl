@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CLUBModelStoreContainer" CdmEntityContainer="CLUBEntities">
+    <EntitySetMapping Name="SOCIOS">
+      <EntityTypeMapping TypeName="CLUBModel.SOCIOS">
+        <MappingFragment StoreEntitySet="SOCIOS">
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="FECHADENAC" ColumnName="FECHADENAC" />
+          <ScalarProperty Name="AFILIADOS" ColumnName="AFILIADOS" />
+          <ScalarProperty Name="DATOSMEMBRESIA" ColumnName="DATOSMEMBRESIA" />
+          <ScalarProperty Name="LUGARDETRABAJO" ColumnName="LUGARDETRABAJO" />
+          <ScalarProperty Name="DIRECCIONOFICINA" ColumnName="DIRECCIONOFICINA" />
+          <ScalarProperty Name="TELOFOCINA" ColumnName="TELOFOCINA" />
+          <ScalarProperty Name="ESTADODEMEMBRESIA" ColumnName="ESTADODEMEMBRESIA" />
+          <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+          <ScalarProperty Name="FECHASALIDA" ColumnName="FECHASALIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
